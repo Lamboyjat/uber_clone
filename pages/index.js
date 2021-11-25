@@ -4,6 +4,7 @@ import Image from "next/image";
 // import styles from "../styles/Home.module.css";
 import tw from "tailwind-styled-components";
 import Map from "./component/Map";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,10 +23,12 @@ export default function Home() {
 
         {/* Action Button */}
         <ActionButtons>
-          <ActionButton>
-            <ActionButtonImage src="https://i.ibb.co/cyvcpfF/uberx.png" />
-            Ride
-          </ActionButton>
+          <Link href="/search">
+            <ActionButton>
+              <ActionButtonImage src="https://i.ibb.co/cyvcpfF/uberx.png" />
+              Ride
+            </ActionButton>
+          </Link>
           <ActionButton>
             <ActionButtonImage src="https://i.ibb.co/n776JLm/bike.png" />
             Wheels
@@ -37,6 +40,7 @@ export default function Home() {
         </ActionButtons>
 
         {/* Input Button */}
+        <InputButton>Where to?</InputButton>
       </ActionItems>
     </Wrapper>
   );
@@ -74,9 +78,13 @@ const ActionButtons = tw.div`
 `;
 
 const ActionButton = tw.div`
-  flex bg-gray-200 flex-1 m-1 h-32 items-center flex-col justify-center rounded-lg
+  flex bg-gray-200 flex-1 m-1 h-32 items-center flex-col justify-center rounded-lg transform hover:scale-105 transition text-xl
 `;
 
 const ActionButtonImage = tw.img`
   h-3/5
+`;
+
+const InputButton = tw.div`
+  h-10 bg-gray-200 text-xl p-4 flex items-center mt-8 rounded-lg
 `;
