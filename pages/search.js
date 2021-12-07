@@ -34,7 +34,7 @@ const search = () => {
 
             {/* Confirm Location */}
             <ConfirmLocation>
-                Confirm Locatioin
+                Confirm Location
             </ConfirmLocation>
         </Wrapper>
     )
@@ -51,7 +51,7 @@ const ButtonContainer = tw.div`
 `
 
 const BackButton = tw.img`
-    h-12
+    h-12 cursor-pointer
 `
 
 const InputContainer = tw.div`
@@ -95,5 +95,5 @@ const StarIcon = tw.img`
 `
 
 const ConfirmLocation = tw.div`
-    rounded-full items-center bg-black px-4 py-1 color-white w-1/4 h-10 text-white flex justify-center m-auto mt-5 
+    cursor-pointer rounded-full items-center bg-black px-4 py-3 w-1/4 h-10 text-white text-center teext-2xl flex justify-center m-auto mt-5 
 `
